@@ -41,5 +41,14 @@ class VotreClasse:
 # Exemple d'utilisation :
 if __name__ == "__main__":
     your_instance = VotreClasse()
-    result_str = your_instance.scanIP(5, 30)
+    print("192.168.[*].[]")
+    print("         ^")
+    print("         |")
+    val1 = int(input("> Choose a number : "))
+    print("192.168.[].[*]")
+    print("            ^")
+    print("            |")
+    val2 = int(input("> Choose a number : "))
+    result_str = your_instance.scanIP(val1, val2)
     print(result_str)
+    input()
