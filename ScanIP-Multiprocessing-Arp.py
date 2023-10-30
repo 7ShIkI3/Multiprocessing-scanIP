@@ -61,7 +61,7 @@ class VotreClasse:
                 print(result.stdout) # Affiche la sortie standard (résultat de la commande arp)
                 lines = result.stdout.splitlines() # Divise la sortie en lignes pour obtenir l'adresse MAC
                 if len(lines) >= 4:
-                    self.__mac.append(lines[3].split()[1])  # Assuming that the MAC address is the second item in the split result
+                    self.__mac.append(lines[3].split()[1])
             else:
                 print(f"Erreur lors de l'exécution de la commande arp pour l'IP : {ip}")
                 print(result.stderr)
@@ -80,11 +80,11 @@ if __name__ == "__main__":
     print("192.168.[*].[]")
     print("         ^")
     print("         |")
-    val1 = int(input("> Choisissez un numéro : "))  # Choisissez au lieu de Choose
+    val1 = int(input("> Choisissez un numéro : "))  
     print(f"192.168.[{val1}].[*]")
     print("              ^")
     print("              |")
-    val2 = int(input("> Choisissez un numéro : "))  # Choisissez au lieu de Choose
+    val2 = int(input("> Choisissez un numéro : ")) 
     resultScanIP = reseau.scanIP(val1, val2)
     print(resultScanIP)
     input()
