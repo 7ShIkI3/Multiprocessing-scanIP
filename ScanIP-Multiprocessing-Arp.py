@@ -17,7 +17,6 @@ class VotreClasse:
     def ping_ip(self, ip_ping):
         result = subprocess.run(["ping", "-n", "1", ip_ping], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
         if "TTL=" in result.stdout:
-            #self.__ip.append(ip_ping)  # Ajoutez l'adresse IP à la liste __ip
             return f"Réponse reçue: {ip_ping}"
         else:
             return f"Adresse IP inaccessible: {ip_ping}"
